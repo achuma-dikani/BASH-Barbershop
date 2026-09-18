@@ -1,82 +1,251 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Reviews | Bash's Barbershop</title>
 
+    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Bash's Barbershop</h1>
+    <header class="site-header">
 
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="./about.html">About Us</a>
-            <a href="./services.html">Services</a>
-            <a href="./price.html">Prices</a>
-            <a href="./appointment.html">Book Appointment</a>
-            <a href="./gallery.html">Gallery</a>
-            <a href="./reviews.html">Reviews</a>
-            <a href="./inquiry.html">Inquiry</a>
-            <a href="./contact.html">Contact</a>
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">Bash's</a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="price.html">Prices</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
         </nav>
+
     </header>
+
 
     <main>
 
-        <section>
-            <h2>Customer Reviews</h2>
-
-            <p>
-                See what our customers have to say about their
-                experience at Bash's Barbershop.
-            </p>
+        <section class="page-banner">
+            <h1>Customer Reviews</h1>
+            <p>See what our customers have to say.</p>
         </section>
 
-        <section>
-            <h2>What Our Customers Say</h2>
 
-            <article>
-                <h3>Customer Review 1</h3>
-                <p>
-                    Customer review will be added here.
-                </p>
-            </article>
+        <section class="section-dark">
 
-            <article>
-                <h3>Customer Review 2</h3>
-                <p>
-                    Customer review will be added here.
-                </p>
-            </article>
+            <div class="container">
 
-            <article>
-                <h3>Customer Review 3</h3>
-                <p>
-                    Customer review will be added here.
-                </p>
-            </article>
+                <div class="section-heading">
+                    <h2>What Our Customers Say</h2>
 
-        </section>
+                    <p>
+                        We value the feedback and experiences
+                        of our customers.
+                    </p>
+                </div>
 
-        <section>
+            
+<section class="section-light">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-label">CUSTOMER FEEDBACK</span>
+
             <h2>Share Your Experience</h2>
 
             <p>
-                We value feedback from our customers.
+                Had a fresh cut at Bash's? Tell us about your experience
+                and let other customers know what you think.
             </p>
+        </div>
 
-            <a href="./inquiry.html">Send an Inquiry</a>
+
+        <div class="review-form-container">
+
+            <form class="review-form">
+
+                <div class="form-group">
+                    <label for="customer-name">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="customer-name"
+                        name="customer-name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="rating">Your Rating</label>
+
+                    <select
+                        id="rating"
+                        name="rating"
+                        required
+                    >
+                        <option value="">Select a rating</option>
+                        <option value="5">★★★★★ - Excellent</option>
+                        <option value="4">★★★★☆ - Very Good</option>
+                        <option value="3">★★★☆☆ - Good</option>
+                        <option value="2">★★☆☆☆ - Fair</option>
+                        <option value="1">★☆☆☆☆ - Poor</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="review">Your Review</label>
+
+                    <textarea
+                        id="review"
+                        name="review"
+                        rows="6"
+                        placeholder="Tell us about your experience at Bash's Barbershop..."
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="btn">
+                    Submit Review
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+
+<section class="section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-label">CUSTOMER REVIEWS</span>
+
+            <h2>What Our Customers Say</h2>
+
+            <p>
+                See what some of our customers have to say about
+                their experience at Bash's Barbershop.
+            </p>
+        </div>
+
+
+        <div class="card-grid">
+
+            
+            <article class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <h3>Nomsa M.</h3>
+
+                <span class="review-type">Customer</span>
+
+                <p>
+                    I brought my son in for his haircut and was very
+                    impressed with the service. The barber was patient,
+                    friendly and paid attention to every detail. My son
+                    left looking so neat and confident. We will definitely
+                    be coming back.
+                </p>
+
+            </article>
+
+
+            
+            <article class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <h3>Thabo K.</h3>
+
+                <span class="review-type">Customer</span>
+
+                <p>
+                    Bash's Barbershop always delivers a clean cut.
+                    I especially liked the attention to detail on my
+                    fade and line-up. The service was professional,
+                    the atmosphere was relaxed, and I left feeling
+                    fresh. Definitely a place I would recommend.
+                </p>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <h3>Ayanda N.</h3>
+
+                <span class="review-type">Customer</span>
+
+                <p>
+                    I had a great experience at Bash's. The barber
+                    understood exactly what I wanted and made sure
+                    everything looked neat before I left. I loved the
+                    final result and appreciated how welcoming the
+                    service was.
+
+
+            </div>
+
+        </section>
+
+
+        <section class="section-light">
+
+            <div class="container section-heading">
+
+                <h2>Share Your Experience</h2>
+
+                <p>
+                    We value your feedback. Send us an inquiry
+                    to share your experience.
+                </p>
+
+                <a href="inquiry.html" class="btn">
+                    Send an Inquiry
+                </a>
+
+            </div>
+
         </section>
 
     </main>
 
+
     <footer>
-        <p>&copy; 2026 Bash's Barbershop. All rights reserved.</p>
+
+        <div class="footer-logo">Bash's Barbershop</div>
+
+        <p>
+            &copy; 2026 Bash's Barbershop. All rights reserved.
+        </p>
+
     </footer>
 
 </body>

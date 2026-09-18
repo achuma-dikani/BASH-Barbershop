@@ -1,89 +1,397 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact | Bash's Barbershop</title>
 
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Bash's Barbershop</h1>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="./about.html">About Us</a>
-            <a href="./services.html">Services</a>
-            <a href="./price.html">Prices</a>
-            <a href="./appointment.html">Book Appointment</a>
-            <a href="./gallery.html">Gallery</a>
-            <a href="./reviews.html">Reviews</a>
-            <a href="./inquiry.html">Inquiry</a>
-            <a href="./contact.html">Contact</a>
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">
+                Bash's
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="price.html">Prices</a>
+                </li>
+
+                <li>
+                    <a href="appointment.html">Book Appointment</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html">Inquiry</a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="active">Contact</a>
+                </li>
+
+            </ul>
+
         </nav>
+
     </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
 
     <main>
 
-        <section>
-            <h2>Contact Us</h2>
+
+        <!-- =========================
+             CONTACT HERO
+        ========================== -->
+
+        <section class="page-banner">
+
+            <h1>Connect With Bash's</h1>
 
             <p>
-                Have a question or need more information?
-                Get in touch with Bash's Barbershop.
+                Follow us, find us and get in touch.
             </p>
+
         </section>
 
-        <section>
-            <h2>Our Location</h2>
 
-            <p>
-                Bash's Barbershop is located in East London CBD, 42 Hudson Street
-                South Africa. 
-            </p>
+        <!-- =========================
+             SOCIAL MEDIA FIRST
+        ========================== -->
+
+<div class="social-logo-grid">
+
+    <!-- INSTAGRAM -->
+    <a class="social-logo-card instagram"
+        href="https://www.instagram.com/bashsbarbershop"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Bash's Barbershop on Instagram">
+
+        <div class="social-logo">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <h3>Instagram</h3>
+
+        <p>@bashsbarbershop</p>
+
+        <span class="social-action">
+            Visit Instagram
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+
+    </a>
+
+
+    <!-- FACEBOOK -->
+    <a class="social-logo-card facebook"
+        href="https://www.facebook.com/bashsbarbershop"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Bash's Barbershop on Facebook">
+
+        <div class="social-logo">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+
+        <h3>Facebook</h3>
+
+        <p>Bash's Barbershop</p>
+
+        <span class="social-action">
+            Visit Facebook
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+
+    </a>
+
+
+    <!-- TIKTOK -->
+    <a class="social-logo-card tiktok"
+        href="https://www.tiktok.com/@bashsbarbershop"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Bash's Barbershop on TikTok">
+
+        <div class="social-logo">
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+
+        <h3>TikTok</h3>
+
+        <p>@bashsbarbershop</p>
+
+        <span class="social-action">
+            Visit TikTok
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+
+    </a>
+
+
+    <!-- WHATSAPP -->
+    <a class="social-logo-card whatsapp"
+        href="https://wa.me/27628367465"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Bash's Barbershop on WhatsApp">
+
+        <div class="social-logo">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+
+        <h3>WhatsApp</h3>
+
+        <p>062 836 7465</p>
+
+        <span class="social-action">
+            Chat With Us
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+
+    </a>
+
+</div>
+
+
         </section>
 
-        <section>
-            <h2>Business Hours</h2>
 
-            <p>
-               Mon -  Fri: 8:00 AM - 6:00 PM
-                Sat: 8:00 AM - 4:00 PM
-                 Sun: Closed
-            </p>
+        <!-- =========================
+             LOCATION
+        ========================== -->
+
+        <section class="section-light">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        FIND US
+                    </span>
+
+                    <h2>Visit The Barbershop</h2>
+
+                    <p>
+                        Come through and get your next cut at Bash's.
+                    </p>
+
+                </div>
+
+
+                <div class="location-feature">
+
+                    <div class="location-icon">
+
+                        <i class="fa-brands fa-google"></i>
+
+                    </div>
+
+
+                    <div class="location-content">
+
+                        <h3>Google Maps</h3>
+
+                        <p>
+                            Mdantsane City Mall, NU6,<br>
+                            Mdantsane, South Africa.
+                        </p>
+
+                        <a class="map-button"
+                            href="https://www.google.com/maps/search/?api=1&query=Mdantsane+City+Mall+NU6+Mdantsane"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Open in Google Maps
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section>
-            <h2>Contact Information</h2>
 
-            <p>
-                Phone: 062 836 7465
-            </p>
+        <!-- =========================
+             CONTACT INFORMATION
+        ========================== -->
 
-            <p>
-                Email: info@bashesbarbershop.com
-            </p>
+        <section class="section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        GET IN TOUCH
+                    </span>
+
+                    <h2>Contact Information</h2>
+
+                    <p>
+                        Have a question? We're just a click away.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- PHONE -->
+
+                    <article class="contact-card">
+
+                        <i class="fa-solid fa-phone contact-icon"></i>
+
+                        <h3>Call Us</h3>
+
+                        <p>
+                            <a href="tel:+27628367465">
+                                062 836 7465
+                            </a>
+                        </p>
+
+                    </article>
+
+
+                    <!-- EMAIL -->
+
+                    <article class="contact-card">
+
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+
+                        <h3>Email Us</h3>
+
+                        <p>
+                            <a href="mailto:info@bashesbarbershop.com">
+                                info@bashesbarbershop.com
+                            </a>
+                        </p>
+
+                    </article>
+
+
+                    <!-- HOURS -->
+
+                    <article class="contact-card">
+
+                        <i class="fa-solid fa-clock contact-icon"></i>
+
+                        <h3>Business Hours</h3>
+
+                        <p>
+                            Monday - Friday: 8:00 AM - 6:00 PM<br>
+                            Saturday: 8:00 AM - 4:00 PM<br>
+                            Sunday: Closed
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section>
-            <h2>Send Us an Inquiry</h2>
 
-            <p>
-                If you have any questions about our services,
-                prices or appointments, you can send us an inquiry.
-            </p>
+        <!-- =========================
+             INQUIRY
+        ========================== -->
 
-            <a href="./inquiry.html">Send an Inquiry</a>
+        <section class="section-light">
+
+            <div class="container section-heading">
+
+                <h2>Need More Information?</h2>
+
+                <p>
+                    If you have questions about our services,
+                    prices or appointments, send us an inquiry.
+                </p>
+
+                <a href="inquiry.html" class="btn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Send an Inquiry
+
+                </a>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        <p>&copy; 2026 Bash's Barbershop. All rights reserved.</p>
+
+        <div class="footer-logo">
+            Bash's Barbershop
+        </div>
+
+        <p>
+            &copy; 2026 Bash's Barbershop. All rights reserved.
+        </p>
+
     </footer>
 
 </body>
+
 </html>

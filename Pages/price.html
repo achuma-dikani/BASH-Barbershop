@@ -1,45 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price List</title>
-    <link rel="stylesheet" href="../styles.css">
+
+    <title>Price List | Bash's Barbershop</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Bash's Barbershop</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="./about.html">About Us</a>
-            <a href="./services.html">Services</a>
-            <a href="./price.html">Prices</a>
-            <a href="./appointment.html">Book Appointment</a>
-            <a href="./gallery.html">Gallery</a>
-            <a href="./reviews.html">Reviews</a>
-            <a href="./inquiry.html">Inquiry</a>
-            <a href="./contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Price List</h2>
-            <ul>
-                <li>Haircut: Low fade, high fade, mid fade, 
-                    skin fade, taper fade, buzz cut, crew cut,
-                     scissor cut, undercut: R90</li>
-                </li>
-                <li>Beard Trim: R25</li>
-                <li>Hair Dye with Cut: R250</li>
-                <li>Hair Dye without Cut: R180</li>
-                <li>Shave: R50</li>
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">Bash's</a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="price.html" class="active">Prices</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-banner">
+            <h1>Price List</h1>
+            <p>Affordable grooming services.</p>
+        </section>
+
+
+        <section class="section-dark">
+
+            <div class="container">
+
+                <div class="price-list">
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Haircut</h3>
+                            <p>
+                                Low fade, high fade, mid fade, skin fade,
+                                taper fade, buzz cut, crew cut, scissor cut
+                                and undercut.
+                            </p>
+                        </div>
+                        <span class="price">R90</span>
+                    </div>
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Beard Trim</h3>
+                        </div>
+                        <span class="price">R25</span>
+                    </div>
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Hair Dye with Cut</h3>
+                        </div>
+                        <span class="price">R250</span>
+                    </div>
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Hair Dye without Cut</h3>
+                        </div>
+                        <span class="price">R180</span>
+                    </div>
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Shave</h3>
+                        </div>
+                        <span class="price">R50</span>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
+
+
     <footer>
-        <p>&copy; 2024 Bash's Barbershop. All rights reserved.</p>
+
+        <div class="footer-logo">Bash's Barbershop</div>
+
+        <p>
+            &copy; 2026 Bash's Barbershop. All rights reserved.
+        </p>
+
     </footer>
+
 </body>
 </html>

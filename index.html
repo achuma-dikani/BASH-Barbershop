@@ -1,68 +1,165 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bash's Barbershop</title>
 
-    <!--Link to CSS file-->
-    <link rel="stylesheet" href="../Styles/style.css">
+    <title>Home | Bash's Barbershop</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Bash's Barbershop</h1>
-        <nav>
-           <a href="./index.html">Home</a>
-           <a href="./Pages/services.html">Services</a>
-           <a href="./Pages/price.html">Prices</a>
-           <a href="./Pages/appointment.html"> Book Appointment</a>
-           <a href="./Pages/Gallery.html">Gallery</a>
-           <a href="./Pages/reviews.html">reviews</a>
-           <a href="./Pages/inquiry.html">Inquiry</a>
-           <a href="./Pages/contact.html">Contact</a>
+    
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">Bash's</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Pages/about.html">About Us</a></li>
+                <li><a href="Pages/services.html">Services</a></li>
+                <li><a href="Pages/price.html">Prices</a></li>
+                <li><a href="Pages/appointment.html">Book Appointment</a></li>
+                <li><a href="Pages/gallery.html">Gallery</a></li>
+                <li><a href="Pages/reviews.html">Reviews</a></li>
+                <li><a href="Pages/inquiry.html">Inquiry</a></li>
+                <li><a href="Pages/contact.html">Contact</a></li>
+            </ul>
 
         </nav>
+
     </header>
+
+
     <main>
-        <section>
-            <h2>Welcome to Bash's Barbershop</h2>
 
-            <p>We offer the best barbershop experience in town. 
-                Our skilled barbers are dedicated to providing you 
-                with the highest quality service.</p>
+        <section class="hero">
 
-                <p> We provide proffesional and affordable grooming services
-                    for customers of all ages.</p>
+            <div class="hero-content">
 
-                    <a
-                    href="./Pages/appointment.html">Book an Appointment</a>
-                    </section>
-                     <section>
-                        <h2> Professional grooming services</h2>
+                <h1>
+                    Look Sharp.<br>
+                    <span>Feel Confident.</span>
+                </h1>
 
-                        <p>Our goal is to provide convinient and proffesional grooming
-                            services that leave our customers satisfied and confident.
-                        </p>
+                <p>
+                    Welcome to Bash's Barbershop, where professional
+                    grooming meets a welcoming atmosphere.
+                </p>
 
-                        <a href="./Pages/services.html">View Our Services</a>
-                     </section>
+                <p>
+                    We provide affordable grooming services for
+                    men, women, boys and girls of all ages.
+                </p>
 
-                     <section>
-                        <h2>Why Choose Bash's Barbershop?</h2>
+                <a href="Pages/appointment.html" class="btn">
+                    Book an Appointment
+                </a>
 
-                        <ul>
-                            <li>Affordable grooming services</li>
-                            <li>Skillful barbers</li>
-                            <li>Convenient location</li>
-                            <li>Friendly and welcoming atmosphere</li>
-                             <li>Easy online booking</li>
-                              <li>Our service is for men and women, boys and girls of all ages</li>
-                        </ul>
-                     </section>
+                <a href="Pages/services.html" class="btn btn-outline">
+                    View Services
+                </a>
+
+            </div>
+
         </section>
+
+
+        <section class="section-light">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Professional Grooming Services</h2>
+
+                    <p>
+                        Our goal is to provide convenient and
+                        professional grooming services that leave
+                        our customers satisfied and confident.
+                    </p>
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="card">
+                        <h3>Haircuts</h3>
+                        <p>
+                            Find the haircut that matches your style, personality,
+                             and the way you want to show up. From clean fades and sharp cuts to classic looks,
+                              we’ll make sure you leave looking fresh, confident, and ready for anything.
+
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Hair Styling</h3>
+                        <p>
+                            Discover different styling options designed to bring your look together.
+                             Whether you want something clean and classic or bold and modern, 
+                             we’ll help you find a style that fits your personality and keeps you looking fresh.
+
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Grooming</h3>
+                        <p>
+                            Keep your look sharp with our grooming services,
+                             including beard trims, beard shaping, clean line-ups, and detailed finishing touches. 
+                             Every detail is carefully maintained to give you a neat, polished look that complements your haircut.
+
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Why Choose Bash's?</h2>
+                </div>
+
+                <ul class="feature-list">
+
+                    <li>Affordable grooming services</li>
+                    <li>Skilled barbers</li>
+                    <li>Convenient location</li>
+                    <li>Friendly and welcoming atmosphere</li>
+                    <li>Easy online appointment requests</li>
+                    <li>Services for customers of all ages</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
     </main>
+
+
     <footer>
-        <p>&copy; 2026 Bash's Barbershop. All rights reserved.</p>
+
+        <div class="footer-logo">Bash's Barbershop</div>
+
+        <p>
+            &copy; 2026 Bash's Barbershop. All rights reserved.
+        </p>
+
     </footer>
+
 </body>
 </html>

@@ -1,84 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Inquiry | Bash's Barbershop</title>
 
+    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Bash's Barbershop</h1>
+    <header class="site-header">
 
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="./about.html">About Us</a>
-            <a href="./services.html">Services</a>
-            <a href="./price.html">Prices</a>
-            <a href="./appointment.html">Book Appointment</a>
-            <a href="./gallery.html">Gallery</a>
-            <a href="./reviews.html">Reviews</a>
-            <a href="./inquiry.html">Inquiry</a>
-            <a href="./contact.html">Contact</a>
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">Bash's</a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="price.html">Prices</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="inquiry.html" class="active">Inquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
         </nav>
+
     </header>
+
 
     <main>
 
-        <section>
-            <h2>Make an Inquiry</h2>
-
-            <p>
-                Do you have a question about our services, prices
-                or appointments? Send us an inquiry and we will
-                get back to you.
-            </p>
+        <section class="page-banner">
+            <h1>Make an Inquiry</h1>
+            <p>Have a question? We would love to hear from you.</p>
         </section>
 
-        <section>
-            <h2>Inquiry Form</h2>
 
-            <form>
+        <section class="section-dark">
 
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name">
+            <div class="container">
 
-                <br><br>
+                <div class="section-heading">
+                    <h2>Inquiry Form</h2>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email">
+                    <p>
+                        Send us a question about our services,
+                        prices or appointments.
+                    </p>
+                </div>
 
-                <br><br>
+                <form class="form-container">
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name"
+                               placeholder="Enter your full name" required>
+                    </div>
 
-                <br><br>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="Enter your email" required>
+                    </div>
 
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="Enter your phone number" required>
+                    </div>
 
-                <br><br>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                               placeholder="Enter your subject" required>
+                    </div>
 
-                <label for="message">Your Inquiry:</label>
-                <br>
-                <textarea id="message" name="message" rows="6" cols="30"></textarea>
+                    <div class="form-group">
+                        <label for="message">Your Inquiry</label>
+                        <textarea id="message" name="message"
+                                  placeholder="Write your inquiry here"
+                                  required></textarea>
+                    </div>
 
-                <br><br>
+                    <button type="submit" class="btn">
+                        Submit Inquiry
+                    </button>
 
-                <button type="submit">Submit Inquiry</button>
+                </form>
 
-            </form>
+            </div>
 
         </section>
 
     </main>
 
+
     <footer>
-        <p>&copy; 2026 Bash's Barbershop. All rights reserved.</p>
+
+        <div class="footer-logo">Bash's Barbershop</div>
+
+        <p>
+            &copy; 2026 Bash's Barbershop. All rights reserved.
+        </p>
+
     </footer>
 
 </body>

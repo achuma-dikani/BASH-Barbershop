@@ -1,0 +1,3241 @@
+/* ============================================================
+   BASH'S BARBERSHOP
+   CREATIVE EDITORIAL STYLESHEET
+   ============================================================ */
+
+
+/* ============================================================
+   01 — DESIGN SYSTEM
+   ============================================================ */
+
+:root {
+    --ink: #0a0a0a;
+    --ink-soft: #121212;
+    --ink-card: #191919;
+
+    --paper: #f1ede4;
+    --paper-soft: #d8d2c6;
+
+    --gold: #c9a227;
+    --gold-bright: #e4c35a;
+
+    --line: rgba(241, 237, 228, 0.16);
+    --line-gold: rgba(201, 162, 39, 0.45);
+
+    --max-width: 1200px;
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ============================================================
+   02 — RESET
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ============================================================
+   03 — TYPOGRAPHY
+   ============================================================ */
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.08;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 9vw, 8.5rem);
+    font-weight: 700;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    letter-spacing: -2px;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+p {
+    color: var(--paper-soft);
+}
+
+
+/* ============================================================
+   04 — CUSTOM SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ink);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-bright);
+}
+
+
+/* ============================================================
+   05 — HEADER
+   ============================================================ */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(10, 10, 10, 0.88);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--line);
+
+    transition: 0.3s ease;
+}
+
+.navbar {
+    max-width: var(--max-width);
+    min-height: 82px;
+
+    margin: auto;
+    padding: 14px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* ============================================================
+   06 — LOGO
+   ============================================================ */
+
+.logo {
+    position: relative;
+
+    color: var(--paper);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+.logo::first-letter {
+    color: var(--gold);
+}
+
+.logo::after {
+    content: "BARBERSHOP";
+
+    position: absolute;
+
+    left: 3px;
+    bottom: -11px;
+
+    color: var(--gold);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.43rem;
+    letter-spacing: 3px;
+}
+
+
+/* ============================================================
+   07 — NAVIGATION
+   ============================================================ */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nav-links a {
+    position: relative;
+
+    padding: 10px 12px;
+
+    color: var(--paper-soft);
+
+    font-size: 0.72rem;
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    transition: 0.3s var(--ease);
+}
+
+.nav-links a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 4px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform 0.35s var(--ease);
+}
+
+.nav-links a:hover {
+    color: var(--gold-bright);
+}
+
+.nav-links a:hover::before,
+.nav-links a.active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-links a.active {
+    color: var(--paper);
+}
+
+
+/* ============================================================
+   08 — GENERAL SECTION
+   ============================================================ */
+
+section {
+    position: relative;
+    padding: 120px 25px;
+
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: auto;
+}
+
+.section-dark {
+    background: var(--ink);
+}
+
+.section-light {
+    background: var(--ink-soft);
+}
+
+
+/* ============================================================
+   09 — SECTION HEADING
+   ============================================================ */
+
+.section-heading {
+    position: relative;
+
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.section-heading::before {
+    content: "BASH'S";
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--gold);
+
+    font-size: 0.65rem;
+    font-weight: bold;
+
+    letter-spacing: 6px;
+}
+
+.section-heading h2 {
+    position: relative;
+}
+
+.section-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 90px;
+    height: 2px;
+
+    margin: 25px auto 0;
+
+    background: var(--gold);
+}
+
+.section-heading p {
+    max-width: 650px;
+
+    margin: 20px auto 0;
+}
+
+
+/* ============================================================
+   10 — HERO
+   ============================================================ */
+
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - 82px);
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(201, 162, 39, 0.16),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(201, 162, 39, 0.07),
+            transparent 25%
+        ),
+        var(--ink);
+
+    isolation: isolate;
+}
+
+
+/* Huge decorative number */
+
+.hero::before {
+    content: "01";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -100px;
+
+    color: rgba(241, 237, 228, 0.025);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 35rem;
+    font-weight: bold;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* Diagonal barber-pole-inspired decoration */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    right: 7%;
+    top: 12%;
+
+    width: 170px;
+    height: 500px;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            transparent 0,
+            transparent 22px,
+            rgba(201, 162, 39, 0.12) 22px,
+            rgba(201, 162, 39, 0.12) 30px
+        );
+
+    transform: rotate(15deg);
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   11 — HERO CONTENT
+   ============================================================ */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: var(--max-width);
+
+    width: 100%;
+
+    margin: auto;
+}
+
+.hero-content::before {
+    content: "EST. 2020  /  EAST LONDON";
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: var(--gold-bright);
+
+    font-size: 0.7rem;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    max-width: 1000px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 620px;
+
+    font-size: 1.05rem;
+}
+
+.hero p:first-of-type {
+    color: var(--paper);
+}
+
+
+/* ============================================================
+   12 — HERO BUTTONS
+   ============================================================ */
+
+.btn {
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 15px 28px;
+
+    color: var(--ink);
+    background: var(--gold);
+
+    border: 1px solid var(--gold);
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    overflow: hidden;
+
+    transition: 0.4s var(--ease);
+}
+
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    left: -110%;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--paper);
+
+    transform: skewX(-20deg);
+
+    transition: left 0.45s var(--ease);
+
+    z-index: 0;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    color: var(--ink);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(201, 162, 39, 0.18);
+}
+
+.btn {
+    isolation: isolate;
+}
+
+.btn:not(:empty) {
+    text-align: center;
+}
+
+.btn-outline {
+    color: var(--gold);
+
+    background: transparent;
+
+    margin-left: 10px;
+}
+
+.btn-outline::before {
+    background: var(--gold);
+}
+
+.btn-outline:hover {
+    color: var(--ink);
+}
+
+
+/* ============================================================
+   13 — CREATIVE CARDS
+   ============================================================ */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 35px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.04),
+            rgba(255,255,255,0.015)
+        );
+
+    border: 1px solid var(--line);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.45s var(--ease),
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* Number behind each card */
+
+.card::after {
+    content: "B";
+
+    position: absolute;
+
+    right: -15px;
+    bottom: -55px;
+
+    color: rgba(201, 162, 39, 0.07);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10rem;
+    font-weight: bold;
+
+    line-height: 1;
+
+    transition: 0.45s var(--ease);
+}
+
+.card:hover {
+    transform: translateY(-12px);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201,162,39,0.10),
+            rgba(255,255,255,0.025)
+        );
+
+    border-color: var(--line-gold);
+}
+
+.card:hover::after {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+.card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 15px;
+
+    color: var(--gold-bright);
+}
+
+.card p {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Gold corner */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 45px;
+    height: 3px;
+
+    background: var(--gold);
+
+    transition: width 0.4s var(--ease);
+}
+
+.card:hover::before {
+    width: 100%;
+}
+
+
+/* ============================================================
+   14 — FEATURE LIST
+   ============================================================ */
+
+.feature-list {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.feature-list li {
+    position: relative;
+
+    padding: 18px 20px 18px 55px;
+
+    color: var(--paper);
+
+    background: rgba(255,255,255,0.025);
+
+    border-bottom: 1px solid var(--line);
+
+    transition: 0.35s var(--ease);
+}
+
+.feature-list li::before {
+    content: "✦";
+
+    position: absolute;
+
+    left: 20px;
+    top: 50%;
+
+    color: var(--gold);
+
+    transform: translateY(-50%);
+
+    transition: transform 0.3s ease;
+}
+
+.feature-list li:hover {
+    padding-left: 65px;
+
+    color: var(--gold-bright);
+
+    background: rgba(201,162,39,0.05);
+}
+
+.feature-list li:hover::before {
+    transform:
+        translateY(-50%)
+        rotate(90deg);
+}
+
+
+/* ============================================================
+   15 — PAGE BANNER
+   ============================================================ */
+
+.page-banner {
+    position: relative;
+
+    padding: 110px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #090909,
+            #191919
+        );
+
+    border-bottom: 1px solid var(--line);
+
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: "BASH'S";
+
+    position: absolute;
+
+    right: -40px;
+    bottom: -80px;
+
+    color: rgba(201,162,39,0.045);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18rem;
+    font-weight: bold;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+.page-banner::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 120px;
+    height: 3px;
+
+    background: var(--gold);
+
+    transform: translateX(-50%);
+}
+
+.page-banner h1 {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: clamp(3rem, 8vw, 7rem);
+}
+
+.page-banner p {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 18px;
+}
+
+
+/* ============================================================
+   16 — ABOUT
+   ============================================================ */
+
+.about-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-layout > div:first-child::before {
+    content: "THE STORY";
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--gold);
+
+    font-size: 0.7rem;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+.about-image {
+    position: relative;
+
+    padding: 15px;
+}
+
+.about-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border: 1px solid var(--gold);
+
+    transform: rotate(3deg);
+
+    transition: transform 0.5s var(--ease);
+}
+
+.about-image:hover::before {
+    transform: rotate(-2deg);
+}
+
+.about-image img {
+    position: relative;
+
+    min-height: 400px;
+
+    object-fit: cover;
+
+    filter: grayscale(30%);
+
+    transition:
+        filter 0.5s ease,
+        transform 0.5s var(--ease);
+
+    box-shadow: 20px 20px 0 rgba(201,162,39,0.08);
+}
+
+.about-image:hover img {
+    filter: grayscale(0%);
+
+    transform: scale(1.02);
+}
+
+
+/* ============================================================
+   17 — PRICE LIST
+   ============================================================ */
+
+.price-list {
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 2px;
+}
+
+.price-item {
+    position: relative;
+
+    min-height: 90px;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background: var(--ink-card);
+
+    border-bottom: 1px solid var(--line);
+
+    transition: 0.35s var(--ease);
+
+    overflow: hidden;
+}
+
+.price-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: var(--gold);
+
+    transform: translateX(-100%);
+
+    transition: transform 0.35s var(--ease);
+}
+
+.price-item:hover {
+    padding-left: 35px;
+
+    background: #202020;
+}
+
+.price-item:hover::before {
+    transform: translateX(0);
+}
+
+.price-item h3 {
+    color: var(--paper);
+
+    margin-bottom: 3px;
+}
+
+.price-item p {
+    margin: 0;
+
+    font-size: 0.88rem;
+}
+
+.price {
+    position: relative;
+
+    min-width: 85px;
+
+    padding: 7px 12px;
+
+    color: var(--ink);
+
+    background: var(--gold);
+
+    text-align: center;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.price-item:hover .price {
+    background: var(--gold-bright);
+
+    transform: rotate(-3deg);
+}
+
+
+/* ============================================================
+   18 — GALLERY
+   ============================================================ */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+/* Make the middle image visually different */
+
+.gallery-item:nth-child(2) {
+    transform: translateY(45px);
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+
+    background: var(--ink-card);
+
+    transition: 0.45s var(--ease);
+}
+
+.gallery-item:hover {
+    border-color: var(--gold);
+
+    transform: translateY(-8px);
+}
+
+.gallery-item:nth-child(2):hover {
+    transform: translateY(35px);
+}
+
+.gallery-item::before {
+    content: "VIEW";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    z-index: 3;
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold);
+
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    font-size: 0.6rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.5);
+
+    transition: 0.4s var(--ease);
+}
+
+.gallery-item::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.8),
+            transparent 55%
+        );
+
+    opacity: 0.7;
+
+    transition: 0.4s ease;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+.gallery-item:hover::after {
+    background: rgba(0,0,0,0.55);
+}
+
+.gallery-item img {
+    height: 390px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s var(--ease),
+        filter 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+
+    filter: grayscale(80%) brightness(0.65);
+}
+
+
+/* ============================================================
+   19 — FORMS
+   ============================================================ */
+
+.form-container {
+    position: relative;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 50px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1b1b,
+            #101010
+        );
+
+    border: 1px solid var(--line);
+
+    box-shadow:
+        25px 25px 0 rgba(201,162,39,0.05);
+}
+
+.form-container::before {
+    content: "B";
+
+    position: absolute;
+
+    right: 20px;
+    top: -45px;
+
+    color: rgba(201,162,39,0.08);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12rem;
+
+    pointer-events: none;
+}
+
+.form-group {
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--paper);
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 15px 14px;
+
+    color: var(--paper);
+
+    background: #0b0b0b;
+
+    border: 1px solid #333;
+
+    outline: none;
+
+    transition: 0.35s ease;
+}
+
+.form-group textarea {
+    min-height: 160px;
+
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666;
+}
+
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+    border-color: #666;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--gold);
+
+    background: #101010;
+
+    box-shadow:
+        inset 4px 0 0 var(--gold),
+        0 0 25px rgba(201,162,39,0.05);
+}
+
+
+/* ============================================================
+   20 — CONTACT
+   ============================================================ */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.contact-card {
+    position: relative;
+
+    padding: 35px;
+
+    background: var(--ink-card);
+
+    border: 1px solid var(--line);
+
+    overflow: hidden;
+
+    transition: 0.4s var(--ease);
+}
+
+.contact-card::before {
+    content: "+";
+
+    position: absolute;
+
+    right: 20px;
+    top: 10px;
+
+    color: rgba(201,162,39,0.15);
+
+    font-size: 5rem;
+    font-weight: 100;
+
+    transition: 0.4s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--gold);
+
+    transform: translateY(-7px);
+}
+
+.contact-card:hover::before {
+    color: rgba(201,162,39,0.35);
+
+    transform: rotate(45deg);
+}
+
+.contact-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 15px;
+
+    color: var(--gold-bright);
+}
+
+.contact-card p {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   21 — REVIEWS
+   ============================================================ */
+
+.review-card {
+    position: relative;
+
+    padding: 40px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1c1c1c,
+            #121212
+        );
+
+    border: 1px solid var(--line);
+
+    overflow: hidden;
+
+    transition: 0.4s var(--ease);
+}
+
+.review-card::before {
+    content: "“";
+
+    position: absolute;
+
+    right: 20px;
+    top: -20px;
+
+    color: rgba(201,162,39,0.12);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 9rem;
+
+    line-height: 1;
+}
+
+.review-card:hover {
+    border-color: var(--gold);
+
+    transform: translateY(-8px);
+}
+
+.stars {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 15px;
+
+    color: var(--gold-bright);
+
+    font-size: 1rem;
+
+    letter-spacing: 4px;
+}
+
+
+/* ============================================================
+   22 — FOOTER
+   ============================================================ */
+
+footer {
+    position: relative;
+
+    padding: 75px 25px 35px;
+
+    text-align: center;
+
+    background: #050505;
+
+    border-top: 1px solid var(--line);
+
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 180px;
+    height: 2px;
+
+    background: var(--gold);
+
+    transform: translateX(-50%);
+}
+
+footer::after {
+    content: "BASH'S";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -90px;
+
+    color: rgba(201,162,39,0.035);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14rem;
+    font-weight: bold;
+
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+.footer-logo {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 10px;
+
+    color: var(--gold);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #888;
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+
+/* ============================================================
+   23 — FOCUS / ACCESSIBILITY
+   ============================================================ */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--gold-bright);
+
+    outline-offset: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   24 — ANIMATION
+   ============================================================ */
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: reveal 1s var(--ease) both;
+}
+
+
+/* ============================================================
+   25 — LARGE TABLETS
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .about-image {
+        max-width: 750px;
+
+        margin: auto;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item:nth-child(2) {
+        transform: none;
+    }
+
+    .gallery-item:nth-child(2):hover {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* ============================================================
+   26 — MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 75px 18px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    h2 {
+        letter-spacing: -1px;
+    }
+
+
+    /* NAV */
+
+    .navbar {
+        padding: 18px 12px;
+
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding: 7px 7px;
+
+        font-size: 0.61rem;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* HERO */
+
+
+    .hero {
+        min-height: 80vh;
+
+        padding: 75px 18px;
+
+        text-align: left;
+    }
+
+    .hero::before {
+        right: -90px;
+        bottom: -30px;
+
+        font-size: 18rem;
+    }
+
+    .hero::after {
+        right: -60px;
+
+        width: 100px;
+        height: 350px;
+    }
+
+    .hero-content::before {
+        font-size: 0.58rem;
+
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 16vw, 5rem);
+    }
+
+    .hero p {
+        font-size: 0.92rem;
+    }
+
+
+    /* BUTTONS */
+
+    .btn {
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+
+
+    /* CARDS */
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 210px;
+    }
+
+
+    /* FEATURES */
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PAGE BANNER */
+
+    .page-banner {
+        padding: 80px 18px;
+    }
+
+    .page-banner h1 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+    .page-banner::before {
+        font-size: 9rem;
+    }
+
+
+    /* ABOUT */
+
+    .about-image img {
+        min-height: 300px;
+    }
+
+
+    /* PRICE */
+
+    .price-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 22px 20px;
+    }
+
+    .price {
+        min-width: 75px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .gallery-item:nth-child(2) {
+        transform: none;
+    }
+
+    .gallery-item:nth-child(2):hover {
+        transform: translateY(-8px);
+    }
+
+    .gallery-item img {
+        height: 330px;
+    }
+
+
+    /* FORM */
+
+    .form-container {
+        padding: 30px 20px;
+
+        box-shadow:
+            12px 12px 0 rgba(201,162,39,0.05);
+    }
+
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 60px 18px 30px;
+    }
+
+    .footer-links {
+        gap: 14px;
+    }
+}
+
+
+/* ============================================================
+   27 — VERY SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 400px) {
+
+    .nav-links a {
+        padding: 6px 5px;
+
+        font-size: 0.56rem;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .form-container {
+        padding: 25px 15px;
+    }
+
+    .card {
+        padding: 28px 22px;
+    }
+}
+
+
+/* ============================================================
+   28 — REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* ENTIRE HOME PAGE */
+main {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("../Assets/background2.jpg") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* Don't let sections hide the image */
+main section {
+    background: transparent !important;
+}
+.card {
+    background: #111111;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 14px;
+    padding: 30px;
+}
+ /* WHY CHOOSE BASH'S - CARD BLOCKS */
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-list li {
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 14px;
+    padding: 25px;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.feature-list li:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Gold star/icon */
+.feature-list li::before {
+    color: #d4af37;
+}
+@media (max-width: 650px) {
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================
+   ABOUT PAGE - CREATIVE SECTIONS
+   ========================================= */
+
+.story-section,
+.journey-section,
+.values-section {
+    padding: 100px 0;
+}
+
+/* Story */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 50px;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.story-text {
+    position: relative;
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 45px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.story-text::after {
+    content: "B";
+    position: absolute;
+    right: -20px;
+    bottom: -60px;
+    font-size: 220px;
+    font-weight: 900;
+    color: rgba(212, 175, 55, 0.06);
+}
+
+.story-number {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.story-text h3 {
+    font-size: 36px;
+    margin: 15px 0 20px;
+}
+
+.story-text p {
+    color: #c5c5c5;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.story-highlight {
+    background: var(--gold);
+    color: #111;
+    border-radius: 16px;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-highlight::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.story-highlight span {
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.story-highlight strong {
+    font-size: 90px;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.story-highlight small {
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TIMELINE
+   ========================================= */
+
+.journey-section {
+    background: rgba(8, 8, 8, 0.65);
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 60px auto 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 90px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gold);
+    opacity: 0.5;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-year {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--gold);
+    text-align: right;
+    padding-right: 35px;
+}
+
+.timeline-content {
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    padding: 30px;
+    border-radius: 14px;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.12);
+}
+
+.timeline-content h3 {
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #bdbdbd;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   VALUES / CARDS
+   ========================================= */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.value-card {
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 14px;
+    padding: 30px;
+    min-height: 230px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.value-number {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.value-card h3 {
+    margin: 30px 0 15px;
+    font-size: 22px;
+}
+
+.value-card p {
+    color: #bdbdbd;
+    line-height: 1.7;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.about-decoration {
+    min-height: 380px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 15, 15, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* Large barber-style circle */
+.decoration-circle {
+    width: 240px;
+    height: 240px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.decoration-circle::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px dashed rgba(212, 175, 55, 0.5);
+    border-radius: 50%;
+}
+
+.decoration-circle span {
+    font-size: 130px;
+    font-weight: 900;
+    color: var(--gold);
+}
+
+/* Decorative diagonal lines */
+.decoration-line {
+    position: absolute;
+    width: 150%;
+    height: 2px;
+    background: var(--gold);
+    transform: rotate(-45deg);
+    opacity: 0.25;
+}
+
+/* Text */
+.decoration-text {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.decoration-text span {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #aaa;
+}
+
+.decoration-text strong {
+    font-size: 32px;
+    color: var(--gold);
+}
+
+.decoration-text small {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #888;
+}
+@media (max-width: 650px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-decoration {
+        min-height: 300px;
+    }
+}
+.about-layout {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("../Assets/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 18px;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+/* Background for More Than Just A Haircut */
+.story-section {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../Assets/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 100px 0;
+    position: relative;
+}
+/* Background for "From One Idea To A Community" */
+.journey-section {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../Assets/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 100px 0;
+    position: relative;
+}
+/* Background for "What We Stand For" */
+.values-section {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../Assets/background2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 100px 0;
+    position: relative;
+}
+/* DATE & TIME INPUTS */
+input[type="date"],
+input[type="time"] {
+    color: white;
+    background-color: #111;
+    border: 1px solid #d4af37;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Make the date/time text visible */
+input[type="date"]::-webkit-datetime-edit,
+input[type="time"]::-webkit-datetime-edit {
+    color: white;
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+    color: white;
+}
+
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="time"]::-webkit-datetime-edit-text {
+    color: white;
+}
+
+/* Make calendar and clock icons visible */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+```css
+/* =========================================================
+   BASH'S BARBERSHOP
+
+========================================================= */
+
+
+/* =========================================================
+   CONTACT PAGE BANNER
+========================================================= */
+
+.page-banner {
+    padding: 110px 20px 90px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("../Assets/haircut10.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.page-banner h1 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.page-banner p {
+    color: #cccccc;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   SECTION BASICS
+========================================================= */
+
+.section-dark,
+.section-light {
+    padding: 100px 0;
+}
+
+.section-dark {
+    background: #090909;
+    color: #ffffff;
+}
+
+.section-light {
+    background: #f4f1e8;
+    color: #111111;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    line-height: 1.7;
+}
+
+.section-dark .section-heading p {
+    color: #aaaaaa;
+}
+
+.section-light .section-heading p {
+    color: #555555;
+}
+
+
+/* SMALL GOLD LABEL */
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #d4af37;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA MAIN SECTION
+========================================================= */
+
+.social-main {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 110px 0;
+}
+
+
+/* Decorative background */
+
+.social-main::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -200px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 175, 55, 0.10),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA GRID
+========================================================= */
+
+.social-logo-grid {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+    max-width: 1100px;
+
+    margin: 55px auto 0;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA CARDS
+========================================================= */
+
+.social-logo-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 300px;
+
+    padding: 38px 20px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171717,
+            #0d0d0d
+        );
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Gold line at bottom */
+
+.social-logo-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #d4af37;
+
+    transform: translateX(-50%);
+
+    transition: width 0.35s ease;
+}
+
+.social-logo-card:hover::after {
+    width: 70%;
+}
+
+
+/* Hover */
+
+.social-logo-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(212, 175, 55, 0.8);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA LOGO CIRCLE
+========================================================= */
+
+.social-logo {
+    width: 92px;
+    height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    background: #070707;
+
+    border: 2px solid rgba(212, 175, 55, 0.4);
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.social-logo-card:hover .social-logo {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   ACTUAL SOCIAL MEDIA ICONS
+========================================================= */
+
+.social-logo i {
+    font-size: 44px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   INSTAGRAM
+========================================================= */
+
+.instagram .social-logo i {
+    background:
+        linear-gradient(
+            45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.instagram:hover .social-logo {
+    border-color: #d62976;
+
+    box-shadow:
+        0 0 30px rgba(214, 41, 118, 0.35);
+}
+
+
+/* =========================================================
+   FACEBOOK
+========================================================= */
+
+.facebook .social-logo i {
+    color: #1877f2;
+}
+
+.facebook:hover .social-logo {
+    border-color: #1877f2;
+
+    box-shadow:
+        0 0 30px rgba(24, 119, 242, 0.35);
+}
+
+
+/* =========================================================
+   TIKTOK
+========================================================= */
+
+.tiktok .social-logo i {
+    color: #ffffff;
+
+    text-shadow:
+        -3px -3px 0 #25f4ee,
+        3px 3px 0 #fe2c55;
+}
+
+.tiktok:hover .social-logo {
+    border-color: #25f4ee;
+
+    box-shadow:
+        0 0 30px rgba(37, 244, 238, 0.3);
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp .social-logo i {
+    color: #25d366;
+}
+
+.whatsapp:hover .social-logo {
+    border-color: #25d366;
+
+    box-shadow:
+        0 0 30px rgba(37, 211, 102, 0.35);
+}
+
+
+/* =========================================================
+   SOCIAL CARD TEXT
+========================================================= */
+
+.social-logo-card h3 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.social-logo-card p {
+    margin: 0 0 22px;
+
+    color: #999999;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SOCIAL ACTION
+========================================================= */
+
+.social-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: #d4af37;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.social-action i {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   GOOGLE MAPS / LOCATION
+========================================================= */
+
+.location-feature {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    max-width: 900px;
+
+    margin: 55px auto 0;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0d0d0d
+        );
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Google logo container */
+
+.location-icon {
+    flex-shrink: 0;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #080808;
+
+    border: 2px solid rgba(212, 175, 55, 0.6);
+
+    border-radius: 50%;
+
+    transition: all 0.35s ease;
+}
+
+.location-icon i {
+    font-size: 46px;
+
+    color: #4285f4;
+
+    transition: transform 0.35s ease;
+}
+
+.location-feature:hover .location-icon {
+    transform: scale(1.08);
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.location-feature:hover .location-icon i {
+    transform: scale(1.12);
+}
+
+
+/* Location text */
+
+.location-content {
+    flex: 1;
+}
+
+.location-content h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+}
+
+.location-content p {
+    margin-bottom: 22px;
+
+    color: #cccccc;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GOOGLE MAPS BUTTON
+========================================================= */
+
+.map-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 22px;
+
+    color: #111111;
+
+    background: #d4af37;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.map-button:hover {
+    transform: translateY(-4px);
+
+    background: #f0cc55;
+
+    box-shadow:
+        0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.map-button i:last-child {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION GRID
+========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    max-width: 1000px;
+
+    margin: 55px auto 0;
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-card {
+    position: relative;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171717,
+            #0d0d0d
+        );
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Contact icons */
+
+.contact-icon {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d4af37;
+
+    font-size: 35px;
+
+    transition:
+        transform 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.15);
+
+    text-shadow:
+        0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+
+/* Contact headings */
+
+.contact-card h3 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+
+/* Contact text */
+
+.contact-card p {
+    color: #aaaaaa;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* Contact links */
+
+.contact-card a {
+    color: #aaaaaa;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #d4af37;
+}
+
+
+/* =========================================================
+   INQUIRY BUTTON
+========================================================= */
+
+.section-light .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 30px;
+
+    padding: 15px 28px;
+
+    color: #faf6f6;
+
+    background: #d4af37;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition: all 0.3s ease;
+}
+
+.section-light .btn:hover {
+    transform: translateY(-4px);
+
+    background: #f0cc55;
+
+    box-shadow:
+        0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .social-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 700px;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 700px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .page-banner {
+        padding: 80px 20px 70px;
+    }
+
+    .section-dark,
+    .section-light {
+        padding: 75px 0;
+    }
+
+
+    /* Social */
+
+    .social-main {
+        padding: 80px 0;
+    }
+
+    .social-logo-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 40px;
+
+        padding: 0 10px;
+    }
+
+    .social-logo-card {
+        min-height: 270px;
+    }
+
+
+    /* Location */
+
+    .location-feature {
+        flex-direction: column;
+
+        text-align: center;
+
+        margin: 40px 10px 0;
+
+        padding: 35px 20px;
+    }
+
+    .location-icon {
+        width: 85px;
+        height: 85px;
+    }
+
+    .location-icon i {
+        font-size: 38px;
+    }
+
+    .location-content h3 {
+        font-size: 24px;
+    }
+
+    .map-button {
+        width: 100%;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Contact */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 40px;
+
+        padding: 0 10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-banner h1 {
+        font-size: 38px;
+    }
+
+    .social-logo {
+        width: 78px;
+        height: 78px;
+    }
+
+    .social-logo i {
+        font-size: 37px;
+    }
+
+    .social-logo-card {
+        padding: 32px 18px;
+    }
+
+    .location-feature {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+}
+```
+/* Need More Information */
+.section-light {
+    background: #f4f1e8 !important;
+    color: #eedcdc !important;
+}
+
+.section-light h2 {
+    color: #f0e7e7 !important;
+}
+
+.section-light p {
+    color: #f3eaea !important;
+}
+
+.section-light .btn {
+    color: #111111 !important;
+    background: #d4af37 !important;
+}
+/* =========================================================
+   CUSTOMER REVIEW FORM
+========================================================= */
+
+.review-form-container {
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 40px;
+
+    background: #111111;
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.review-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.review-form label {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    color: #ffffff;
+    background: #1b1b1b;
+
+    border: 1px solid #444444;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.review-form textarea {
+    resize: vertical;
+}
+
+.review-form input::placeholder,
+.review-form textarea::placeholder {
+    color: #888888;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.review-form select option {
+    background: #111111;
+    color: #ffffff;
+}
+
+.review-form .btn {
+    align-self: flex-start;
+
+    padding: 14px 28px;
+
+    color: #111111;
+    background: #d4af37;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.review-form .btn:hover {
+    background: #f0cc55;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(212, 175, 55, 0.25);
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .review-form-container {
+        margin: 40px 10px 0;
+        padding: 25px 20px;
+    }
+
+    .review-form .btn {
+        width: 100%;
+    }
+
+}
