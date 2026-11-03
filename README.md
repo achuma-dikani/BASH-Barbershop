@@ -176,28 +176,28 @@ The screenshots should show:
 ## Screenshots
 
 ### Home Page
-![Home Page](homepage.pnge/home.png)
+![Home Page](/homepage.png)
 
 ### About Page
-![About Page](about%20us.png/about.png)
+![About Page](/about%20us.png)
 
 ### Services Page
-![Services Page](sevices.png/services.png)
+![Services Page](/sevices.png)
 
 ### Gallery Page
-![Gallery Page](gallery.png/gallery.png)
+![Gallery Page](/gallery.png)
 
 ### Contact Page
-![Contact Page](contact.png/contact.png)
+![Contact Page](/contact.png)
 
 ### Appointment Page
-![Appointment Page](book%20appointment.png/appointment.png)
+![Appointment Page](/book%20appointment.png)
 
 ### Inquiry Page
-![Inquiry Page](inquiry.png/inquiry.png)
+![Inquiry Page](/inquiry.png)
 
 ### Mobile View
-![Mobile View](mobile.png/mobile.png)
+![Mobile View](/mobile.png)
 
 ## Author
 
