@@ -6,19 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Services | Bash's Barbershop</title>
+    <title>Barbering Services | Bash's Barbershop</title>
+    <meta name="description" content="Explore haircuts, hair styling and grooming services at Bash's Barbershop in Mdantsane. Find the right grooming service for you.">
 
-    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
     <header class="site-header">
-
         <nav class="navbar">
 
             <a href="../index.html" class="logo">Bash's</a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">☰</button>
 
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
@@ -33,9 +36,7 @@
             </ul>
 
         </nav>
-
     </header>
-
 
     <main>
 
@@ -44,14 +45,12 @@
             <p>Professional grooming for all ages.</p>
         </section>
 
-
         <section class="section-dark">
 
             <div class="container">
 
                 <div class="section-heading">
                     <h2>What We Offer</h2>
-
                     <p>
                         Bash's Barbershop provides professional and
                         affordable grooming services for customers
@@ -59,9 +58,33 @@
                     </p>
                 </div>
 
-                <div class="card-grid">
+                <!-- SERVICE SEARCH AND FILTER -->
+                <div class="service-tools">
 
-                    <article class="card">
+                    <input type="search" id="serviceSearch"
+                        placeholder="Search for a service..."
+                        aria-label="Search services">
+
+                    <select id="serviceFilter"
+                        aria-label="Filter services">
+
+                        <option value="all">All Services</option>
+                        <option value="hair">Hair Services</option>
+                        <option value="grooming">Grooming</option>
+                        <option value="children">Children's Services</option>
+
+                    </select>
+
+                </div>
+
+                <p id="serviceResults" aria-live="polite">
+                    Showing all services.
+                </p>
+
+                <div class="card-grid" id="serviceGrid">
+
+                    <article class="card service-card"
+                        data-category="hair">
                         <h3>Haircuts</h3>
                         <p>
                             Get your desired haircut to suit your
@@ -69,7 +92,8 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card service-card"
+                        data-category="hair">
                         <h3>Hair Styling</h3>
                         <p>
                             Choose from different styling options
@@ -77,7 +101,8 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card service-card"
+                        data-category="grooming">
                         <h3>Grooming</h3>
                         <p>
                             Our grooming services help customers
@@ -85,7 +110,8 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card service-card"
+                        data-category="children">
                         <h3>Children's Services</h3>
                         <p>
                             Children aged 3 and above are welcome
@@ -98,7 +124,6 @@
             </div>
 
         </section>
-
 
         <section class="section-light">
 
@@ -120,16 +145,12 @@
 
     </main>
 
-
     <footer>
-
         <div class="footer-logo">Bash's Barbershop</div>
-
-        <p>
-            &copy; 2026 Bash's Barbershop. All rights reserved.
-        </p>
-
+        <p>&copy; 2026 Bash's Barbershop. All rights reserved.</p>
     </footer>
+
+    <script src="../js/script.js"></script>
 
 </body>
 </html>

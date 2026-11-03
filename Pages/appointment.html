@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,19 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Book Appointment | Bash's Barbershop</title>
+    <title>Book an Appointment | Bash's Barbershop</title>
+    <meta name="description" content="Request a haircut or grooming appointment at Bash's Barbershop in Mdantsane. Choose your preferred service, date and time.">
 
-    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
     <header class="site-header">
-
         <nav class="navbar">
 
             <a href="../index.html" class="logo">Bash's</a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">☰</button>
 
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
@@ -33,9 +35,7 @@
             </ul>
 
         </nav>
-
     </header>
-
 
     <main>
 
@@ -44,69 +44,99 @@
             <p>Choose a convenient time for your visit.</p>
         </section>
 
-
         <section class="section-dark">
 
             <div class="container">
 
                 <div class="section-heading">
                     <h2>Appointment Form</h2>
-
                     <p>
                         Complete the form below to request an appointment
                         at Bash's Barbershop.
                     </p>
                 </div>
 
-                <form class="form-container">
+                <form class="form-container"
+                    id="appointmentForm"
+                    action="https://formsubmit.co/achumadikani18@gmail.com"
+                    method="POST">
+
+                    <input type="hidden" name="_subject"
+                        value="New Appointment Request - Bash's Barbershop">
+
+                    <input type="hidden" name="_template" value="table">
+
+                    <input type="text" name="_honey"
+                        style="display:none">
 
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name"
-                               placeholder="Enter your full name" required>
+                        <label for="appointmentName">Full Name</label>
+                        <input type="text" id="appointmentName"
+                            name="name"
+                            placeholder="Enter your full name"
+                            minlength="2" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email"
-                               placeholder="Enter your email" required>
+                        <label for="appointmentEmail">Email Address</label>
+                        <input type="email" id="appointmentEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone"
-                               placeholder="Enter your phone number" required>
+                        <label for="appointmentPhone">Phone Number</label>
+                        <input type="tel" id="appointmentPhone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            pattern="[0-9+ ]{9,15}"
+                            title="Enter a valid phone number"
+                            required>
                     </div>
 
                     <div class="form-group">
-                        <label for="date">Appointment Date</label>
-                        <input type="date" id="date" name="date" required>
+                        <label for="appointmentDate">Appointment Date</label>
+                        <input type="date" id="appointmentDate"
+                            name="appointment_date" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="time">Preferred Time</label>
-                        <input type="time" id="time" name="time" required>
+                        <label for="appointmentTime">Preferred Time</label>
+                        <input type="time" id="appointmentTime"
+                            name="appointment_time"
+                            min="08:00" max="18:00" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="service">Select Service</label>
-                        <select id="service" name="service" required>
+                        <label for="appointmentService">Select Service</label>
+                        <select id="appointmentService"
+                            name="service" required>
+
                             <option value="">Select a service</option>
-                            <option value="haircut">Haircut</option>
-                            <option value="hair-styling">Hair Styling</option>
-                            <option value="grooming">Grooming Service</option>
-                            <option value="children">Children's Service</option>
+                            <option value="Haircut">Haircut</option>
+                            <option value="Hair Styling">Hair Styling</option>
+                            <option value="Grooming Service">Grooming Service</option>
+                            <option value="Children's Service">Children's Service</option>
+
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Additional Information</label>
-                        <textarea id="message" name="message"
-                                  placeholder="Enter any additional information"></textarea>
+                        <label for="appointmentMessage">
+                            Additional Information
+                        </label>
+
+                        <textarea id="appointmentMessage"
+                            name="additional_information"
+                            placeholder="Enter any additional information"></textarea>
                     </div>
 
+                    <p id="appointmentStatus"
+                        role="status" aria-live="polite"></p>
+
                     <button type="submit" class="btn">
-                        Submit Appointment
+                        Submit Appointment Request
                     </button>
 
                 </form>
@@ -117,16 +147,12 @@
 
     </main>
 
-
     <footer>
-
         <div class="footer-logo">Bash's Barbershop</div>
-
-        <p>
-            &copy; 2026 Bash's Barbershop. All rights reserved.
-        </p>
-
+        <p>&copy; 2026 Bash's Barbershop. All rights reserved.</p>
     </footer>
+
+    <script src="../js/script.js"></script>
 
 </body>
 </html>

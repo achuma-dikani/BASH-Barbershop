@@ -1,10 +1,13 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact Bash's Barbershop in Mdantsane. Find our location, connect with us on social media or get in touch to learn more about our grooming services.">
 
     <title>Contact | Bash's Barbershop</title>
 
@@ -14,13 +17,16 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <!-- HEADER -->
 
     <header class="site-header">
 
@@ -30,43 +36,23 @@
                 Bash's
             </a>
 
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
             <ul class="nav-links">
 
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="price.html">Prices</a>
-                </li>
-
-                <li>
-                    <a href="appointment.html">Book Appointment</a>
-                </li>
-
-                <li>
-                    <a href="gallery1.html">Gallery</a>
-                </li>
-
-                <li>
-                    <a href="reviews.html">Reviews</a>
-                </li>
-
-                <li>
-                    <a href="inquiry.html">Inquiry</a>
-                </li>
-
-                <li>
-                    <a href="contact.html" class="active">Contact</a>
-                </li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="price.html">Prices</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="gallery1.html">Gallery</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
 
             </ul>
 
@@ -75,16 +61,9 @@
     </header>
 
 
-    <!-- =========================
-         MAIN
-    ========================== -->
-
     <main>
 
-
-        <!-- =========================
-             CONTACT HERO
-        ========================== -->
+        <!-- CONTACT HERO -->
 
         <section class="page-banner">
 
@@ -97,112 +76,109 @@
         </section>
 
 
-        <!-- =========================
-             SOCIAL MEDIA FIRST
-        ========================== -->
+        <!-- SOCIAL MEDIA -->
 
-<div class="social-logo-grid">
+        <section class="section-light">
 
-    <!-- INSTAGRAM -->
-    <a class="social-logo-card instagram"
-        href="https://www.instagram.com/bashsbarbershop"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Visit Bash's Barbershop on Instagram">
+            <div class="container">
 
-        <div class="social-logo">
-            <i class="fa-brands fa-instagram"></i>
-        </div>
+                <div class="social-logo-grid">
 
-        <h3>Instagram</h3>
+                    <!-- INSTAGRAM -->
+                    <a class="social-logo-card instagram"
+                        href="https://www.instagram.com/bashsbarbershop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Bash's Barbershop on Instagram">
 
-        <p>@bashsbarbershop</p>
+                        <div class="social-logo">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
 
-        <span class="social-action">
-            Visit Instagram
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </span>
+                        <h3>Instagram</h3>
+                        <p>@bashsbarbershop</p>
 
-    </a>
+                        <span class="social-action">
+                            Visit Instagram
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
 
-
-    <!-- FACEBOOK -->
-    <a class="social-logo-card facebook"
-        href="https://www.facebook.com/bashsbarbershop"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Visit Bash's Barbershop on Facebook">
-
-        <div class="social-logo">
-            <i class="fa-brands fa-facebook"></i>
-        </div>
-
-        <h3>Facebook</h3>
-
-        <p>Bash's Barbershop</p>
-
-        <span class="social-action">
-            Visit Facebook
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </span>
-
-    </a>
+                    </a>
 
 
-    <!-- TIKTOK -->
-    <a class="social-logo-card tiktok"
-        href="https://www.tiktok.com/@bashsbarbershop"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Visit Bash's Barbershop on TikTok">
+                    <!-- FACEBOOK -->
+                    <a class="social-logo-card facebook"
+                        href="https://www.facebook.com/bashsbarbershop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Bash's Barbershop on Facebook">
 
-        <div class="social-logo">
-            <i class="fa-brands fa-tiktok"></i>
-        </div>
+                        <div class="social-logo">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
 
-        <h3>TikTok</h3>
+                        <h3>Facebook</h3>
+                        <p>Bash's Barbershop</p>
 
-        <p>@bashsbarbershop</p>
+                        <span class="social-action">
+                            Visit Facebook
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
 
-        <span class="social-action">
-            Visit TikTok
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </span>
-
-    </a>
+                    </a>
 
 
-    <!-- WHATSAPP -->
-    <a class="social-logo-card whatsapp"
-        href="https://wa.me/27628367465"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with Bash's Barbershop on WhatsApp">
+                    <!-- TIKTOK -->
+                    <a class="social-logo-card tiktok"
+                        href="https://www.tiktok.com/@bashsbarbershop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Bash's Barbershop on TikTok">
 
-        <div class="social-logo">
-            <i class="fa-brands fa-whatsapp"></i>
-        </div>
+                        <div class="social-logo">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
 
-        <h3>WhatsApp</h3>
+                        <h3>TikTok</h3>
+                        <p>@bashsbarbershop</p>
 
-        <p>062 836 7465</p>
+                        <span class="social-action">
+                            Visit TikTok
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
 
-        <span class="social-action">
-            Chat With Us
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </span>
+                    </a>
 
-    </a>
 
-</div>
+                    <!-- WHATSAPP -->
+                    <a class="social-logo-card whatsapp"
+                        href="https://wa.me/063 515 6642"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Chat with Bash's Barbershop on WhatsApp">
 
+                        <div class="social-logo">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+
+                        <h3>WhatsApp</h3>
+                        <p>0635156642</p>
+
+                        <span class="social-action">
+                            Chat With Us
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
 
         </section>
 
 
-        <!-- =========================
-             LOCATION
-        ========================== -->
+        <!-- LOCATION AND INTERACTIVE MAP -->
 
         <section class="section-light">
 
@@ -226,11 +202,8 @@
                 <div class="location-feature">
 
                     <div class="location-icon">
-
                         <i class="fa-brands fa-google"></i>
-
                     </div>
-
 
                     <div class="location-content">
 
@@ -247,13 +220,29 @@
                             rel="noopener noreferrer">
 
                             <i class="fa-solid fa-location-dot"></i>
-
                             Open in Google Maps
-
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
                         </a>
 
+                    </div>
+
+                </div>
+
+
+                <!-- INTERACTIVE LEAFLET MAP -->
+
+                <div class="map-container">
+
+                    <h3>Find Bash's Barbershop</h3>
+
+                    <p>
+                        Explore our location at Mdantsane City Mall.
+                    </p>
+
+                    <div id="barbershop-map"
+                        role="application"
+                        aria-label="Interactive map showing Mdantsane City Mall">
                     </div>
 
                 </div>
@@ -263,9 +252,7 @@
         </section>
 
 
-        <!-- =========================
-             CONTACT INFORMATION
-        ========================== -->
+        <!-- CONTACT INFORMATION -->
 
         <section class="section-dark">
 
@@ -287,7 +274,6 @@
 
 
                 <div class="contact-grid">
-
 
                     <!-- PHONE -->
 
@@ -315,15 +301,15 @@
                         <h3>Email Us</h3>
 
                         <p>
-                            <a href="mailto:info@bashesbarbershop.com">
-                                info@bashesbarbershop.com
+                            <a href="mailto:achumadikani18@gmail.com">
+                                achumadikani18@gmail.com
                             </a>
                         </p>
 
                     </article>
 
 
-                    <!-- HOURS -->
+                    <!-- BUSINESS HOURS -->
 
                     <article class="contact-card">
 
@@ -345,10 +331,84 @@
 
         </section>
 
+<!-- GENERAL CONTACT FORM -->
 
-        <!-- =========================
-             INQUIRY
-        ========================== -->
+<section class="section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-label">SEND US A MESSAGE</span>
+            <h2>Get In Touch</h2>
+            <p>
+                Have a general question or feedback?
+                Complete the form below and contact our team.
+            </p>
+        </div>
+
+        <form class="form-container"
+            id="contactForm"
+            action="https://formsubmit.co/info@bashesbarbershop.com"
+            method="POST">
+
+            <input type="hidden" name="_subject"
+                value="New Contact Message - Bash's Barbershop">
+
+            <input type="hidden" name="_template" value="table">
+
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    minlength="2" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="messageType">Message Type</label>
+                <select id="messageType" name="message_type" required>
+                    <option value="">Select message type</option>
+                    <option value="General question">General question</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Complaint">Complaint</option>
+                    <option value="Compliment">Compliment</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="contactMessage">Your Message</label>
+                <textarea id="contactMessage"
+                    name="message"
+                    placeholder="Write your message here..."
+                    minlength="10" required></textarea>
+            </div>
+
+            <p id="contactStatus" role="status"
+                aria-live="polite"></p>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+        <!-- INQUIRY -->
 
         <section class="section-light">
 
@@ -364,7 +424,6 @@
                 <a href="inquiry.html" class="btn">
 
                     <i class="fa-solid fa-paper-plane"></i>
-
                     Send an Inquiry
 
                 </a>
@@ -376,9 +435,7 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -391,6 +448,15 @@
         </p>
 
     </footer>
+
+
+    <!-- LEAFLET MAP JAVASCRIPT -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- WEBSITE JAVASCRIPT -->
+
+    <script src="../js/script.js"></script>
 
 </body>
 
